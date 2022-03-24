@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, span{
     font-weight: bold;
 }
 
+navbar a{
+    font-family: 'Signika', sans-serif;
+}
+
 p{
     font-family: 'Poppins', sans-serif;
     line-height: 2;
