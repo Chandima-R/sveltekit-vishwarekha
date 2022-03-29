@@ -1,12 +1,12 @@
-<div class="carousel">
-    <div class="slides" bind:this={siema}>
+<div className="carousel">
+    <div className="slides" bind:this={siema}>
         <slot></slot>
     </div>
     {#if controls}
-        <button class="left" on:click={left} use:resetInterval={autoplay} aria-label="left">
+        <button className="left" on:click={left} use:resetInterval={autoplay} aria-label="left">
             <slot name="left-control"></slot>
         </button>
-        <button class="right" on:click={right} use:resetInterval={autoplay} aria-label="right">
+        <button className="right" on:click={right} use:resetInterval={autoplay} aria-label="right">
             <slot name="right-control"></slot>
         </button>
     {/if}
@@ -20,12 +20,6 @@
 </div>
 
 <style>
-    .carousel {
-        position: relative;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
 
     button {
         position: absolute;
@@ -37,50 +31,59 @@
         border: none;
         background-color: transparent;
     }
+
     button:focus {
         outline: none;
     }
 
-    .left {
-        left: 2vw;
-    }
-
-    .right {
-        right: 2vw;
-    }
     ul {
         list-style-type: none;
         position: absolute;
-        display: flex;
+        display: none;
         justify-content: center;
         width: 100%;
         margin-top: -30px;
         padding: 0;
     }
+
     ul li {
         margin: 6px;
         border-radius: 100%;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255, 255, 255, 0.5);
         height: 8px;
         width: 8px;
     }
+
     ul li:hover {
-        background-color: rgba(255,255,255,0.85);
+        background-color: rgba(255, 255, 255, 0.85);
     }
+
     ul li.active {
-        background-color: rgba(255,255,255,1);
+        background-color: rgba(255, 255, 255, 1);
     }
 </style>
 
 <script>
     import Siema from 'siema'
-    import { onMount, createEventDispatcher } from 'svelte'
+    import {onMount, createEventDispatcher} from 'svelte'
 
-    export let perPage = 3
+    function selectCardsPerScreen(){
+        if(window.innerWidth <= 375 ){
+            return perPage = 1;
+        }else if(window.innerWidth <= 768){
+            return perPage = 2;
+        }else if(window.innerWidth <= 1024){
+            return perPage = 3;
+        }else {
+            return perPage = 6;
+        }
+    }
+
+    export let perPage = 5
     export let loop = true
     export let autoplay = 0
-    export let duration = 2000
-    export let easing = 'fade'
+    export let duration = 200
+    export let easing = 'ease-in'
     export let startIndex = 0
     export let draggable = true
     export let multipleDrag = true
@@ -100,9 +103,16 @@
     $: totalDots = controller ? Math.ceil(controller.innerElements.length / currentPerPage) : []
 
     onMount(() => {
+
         controller = new Siema({
             selector: siema,
-            perPage: typeof perPage === 'object' ? perPage : Number(perPage),
+            // perPage: typeof perPage === 'object' ? perPage : Number(perPage),
+            perPage: {
+                375: 2,
+                768:3,
+                1024: 4,
+                1500:5
+            },
             loop,
             duration,
             easing,
@@ -114,7 +124,7 @@
             onChange: handleChange
         })
 
-        if(autoplay) {
+        if (autoplay) {
             timer = setInterval(right, autoplay);
         }
         return () => {
@@ -123,21 +133,21 @@
         }
     })
 
-    export function isDotActive (currentIndex, dotIndex) {
+    export function isDotActive(currentIndex, dotIndex) {
         if (currentIndex < 0) currentIndex = pips.length + currentIndex;
-        return currentIndex >= dotIndex*currentPerPage && currentIndex < (dotIndex*currentPerPage)+currentPerPage
+        return currentIndex >= dotIndex * currentPerPage && currentIndex < (dotIndex * currentPerPage) + currentPerPage
     }
 
-    export function left () {
+    export function left() {
         controller.prev()
     }
 
-    export function right () {
+    export function right() {
         controller.next()
     }
 
-    export function go (index) {
-        controller.goTo(carousel)
+    export function go(index) {
+        controller.goTo(index)
     }
 
     export function pause() {
@@ -150,12 +160,12 @@
         }
     }
 
-    function handleChange (event) {
+    function handleChange(event) {
         currentIndex = controller.currentSlide
         dispatch('change', {
             currentSlide: controller.currentSlide,
             slideCount: controller.innerElements.length
-        } )
+        })
     }
 
     function resetInterval(node, condition) {
@@ -164,7 +174,7 @@
             resume();
         }
 
-        if(condition) {
+        if (condition) {
             node.addEventListener('click', handleReset);
         }
 

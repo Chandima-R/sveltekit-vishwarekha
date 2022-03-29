@@ -1,10 +1,24 @@
 <script>
     // carousel start
+    import Carousel from './Carousel.svelte'
 
-    // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+    let colors = [
+        {label: 'Food Supplement', name:"Yakinaran Tablets", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
+        {label: 'Food Supplement', name:"Traditional Turmeric Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
+        {label: 'Food Supplement', name:"Pepper Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
+        {label: 'Food Supplement', name:"Curry Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
+        {label: 'Food Supplement', name:"Curry Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"}
+    ]
 
-    // icon-images array
-    // let images =['icon-image-1.svg', 'icon-image-2.svg', 'icon-image-3.svg', 'icon-image-4.svg', 'icon-image-5.svg', 'icon-image-6.svg']
+    let icons_section = [
+        {label: 'icon1', image: "./images/icon-image-1.svg"},
+        {label: 'icon2', image: "./images/icon-image-2.svg"},
+        {label: 'icon3', image: "./images/icon-image-3.svg"},
+        {label: 'icon4', image: "./images/icon-image-4.svg"},
+        {label: 'icon5', image: "./images/icon-image-5.svg"},
+        {label: 'icon6', image: "./images/icon-image-6.svg"},
+    ]
+
     //carosuel end
     import { onMount } from "svelte";
 
@@ -58,11 +72,6 @@
 
 <style>
     /*carousel start*/
-    /*.color-block {*/
-    /*    height: 8rem;*/
-    /*    width: 8rem;*/
-    /*}*/
-
     span {
         display: inline-block;
         margin-top: 6rem;
@@ -239,25 +248,15 @@
         }
     }
 
+    Carousel{
+        background-color: #bbdefb !important;
+    }
+
 </style>
-
-
-
-<!--<Carousel autoplay="2000">-->
-<!--    {#each colors as color, index (index)}-->
-<!--        <div class="color-block" >-->
-<!--            <img alt="icon-image" src="./images/{images}" />-->
-<!--            <h1>header</h1>-->
-<!--        </div>-->
-<!--    {/each}-->
-<!--&lt;!&ndash;    <span slot="left-control">Left</span>&ndash;&gt;-->
-<!--&lt;!&ndash;    <span slot="right-control">Right</span>&ndash;&gt;-->
-<!--</Carousel>-->
-
 
 <!--start of navbar-->
 <nav class="nav-transparent h-16 lg:h-28 nav-default absolute w-full bg-green-900 flex items-center justify-between mt-0" id="nav">
-    <a href="#" class="w-fit p-4 ml-0 lg:w-3/5 lg:ml-16 lg:p-0">
+    <a href="/" class="w-fit p-4 ml-0 lg:w-3/5 lg:ml-16 lg:p-0">
         <img class="w-64" alt="vishwarekha-logo" src="./images/vishwarekha-logo.svg" />
     </a>
     <div class="bg-transparent w-full justify-end lg:bg-green-900 lg:max-w-screen-lg px-10 m-auto box-border flex items-center h-fit rounded-tl-full rounded-bl-full lg:px-20">
@@ -345,38 +344,21 @@
                     </button>
                 </div>
             </div>
-<!--            <div class="flex justify-around rounded-2xl bg-blue-100 p-2 overflow-x-auto hover:overflow-scroll-y lg:p-10">-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full flex flex-col justify-center text-center">-->
-<!--                    <p class="text-2xl text-amber-400 font-bold capitalize">see more in</p>-->
-<!--                    <h1  class="text-3xl text-green-900 font-medium capitalize">vishwarekha foods</h1>-->
-<!--                    <img class="w-10 h-10 mx-auto" alt="see-more" src="./images/link-image.png" />-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+            <div class="mb-10 bg-blue-100">
+                <Carousel autoplay="4000">
+                    {#each colors as color, index (index)}
+                        <div class="flex justify-around rounded-lg p-2">
+                            <div class="item-card border border-green-900 rounded-xl p-4 bg-white m-2 w-full">
+                                <img alt="card-image" src={color.image}/>
+                                <h1 class="text-amber-400 text-lg capitalize font-medium">{color.label}</h1>
+                                <h2 class="text-black capitalize text-lg font-medium">{color.name}</h2>
+                                <p class="text-xl capitalize font-bold text-green-900 ">{color.price}</p>
+                            </div>
+                        </div>
+                    {/each}
+                </Carousel>
+            </div>
+        </div>
         <div class="w-full mb-10">
             <div class="flex flex-col mb-10 lg:flex-row-reverse">
                 <div class="bg-[url('./images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
@@ -390,78 +372,21 @@
                     </button>
                 </div>
             </div>
-<!--            <Swiper-->
-<!--                    class="flex rounded-lg bg-blue-100 p-2 lg:p-10"-->
-<!--                    modules={[Navigation, Pagination, Scrollbar, A11y]}-->
-<!--                    slidesPerView={1}-->
-<!--                    navigation-->
-<!--                    pagination={{ clickable: true }}-->
-<!--                    scrollbar={{ draggable: true }}-->
-<!--                    on:slideChange={() => console.log('slide change')}-->
-<!--                    on:swiper={(e) => console.log(e.detail[0])}-->
-<!--            >-->
-<!--                <SwiperSlide class="border border-green-900 rounded-lg p-2 m-2 bg-white w-fit">-->
-<!--                    <img class="w-fit" alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </SwiperSlide>-->
-<!--                <SwiperSlide class="border border-green-900 rounded-xl p-4 bg-white m-2 w-fit">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </SwiperSlide>-->
-<!--                <SwiperSlide class="border border-green-900 rounded-xl p-4 bg-white m-2 w-fit">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </SwiperSlide>-->
-<!--                <SwiperSlide class="border border-green-900 rounded-xl p-4 bg-white m-2 w-fit">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </SwiperSlide>-->
-<!--                <SwiperSlide class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <p class="text-2xl text-amber-400 font-bold capitalize">see more in</p>-->
-<!--                    <h1  class="text-3xl text-green-900 font-medium capitalize">vishwarekha herbal</h1>-->
-<!--                    <img class="w-10 h-10 mx-auto" alt="see-more" src="./images/link-image.png" />-->
-<!--                </SwiperSlide>-->
-<!--            </Swiper>-->
-<!--            <div class="flex justify-around rounded-2xl bg-blue-100 p-10">-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full flex flex-col justify-center text-center">-->
-<!--                    <p class="text-2xl text-amber-400 font-bold capitalize">see more in</p>-->
-<!--                    <h1  class="text-3xl text-green-900 font-medium capitalize">vishwarekha real life</h1>-->
-<!--                    <img class="w-10 h-10 mx-auto" alt="see-more" src="./images/link-image.png" />-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+            <div class="mb-10 bg-blue-100">
+                <Carousel autoplay="4000">
+                    {#each colors as color, index (index)}
+                        <div class="flex justify-around rounded-lg p-2">
+                            <div class="item-card border border-green-900 rounded-xl p-4 bg-white m-2 w-full">
+                                <img alt="card-image" src={color.image}/>
+                                <h1 class="text-amber-400 text-lg capitalize font-medium">{color.label}</h1>
+                                <h2 class="text-black capitalize text-lg font-medium">{color.name}</h2>
+                                <p class="text-xl capitalize font-bold text-green-900 ">{color.price}</p>
+                            </div>
+                        </div>
+                    {/each}
+                </Carousel>
+            </div>
+        </div>
         <div class="w-full mb-10">
             <div class="flex flex-col mb-10 lg:flex-row">
                 <div class="bg-[url('./images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
@@ -475,53 +400,33 @@
                     </button>
                 </div>
             </div>
-<!--            <div class="flex justify-around rounded-2xl bg-blue-100 p-10">-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full">-->
-<!--                    <img alt="card-image" src="./images/card-image-1.jpg"/>-->
-<!--                    <h1 class="text-amber-400 text-lg capitalize font-medium">food supplement</h1>-->
-<!--                    <h2 class="text-black capitalize text-lg font-medium">yakinaran tablets</h2>-->
-<!--                    <p class="text-xl capitalize font-bold text-green-900 ">LKR 1200.00</p>-->
-<!--                </div>-->
-<!--                <div class="border border-green-900 rounded-xl p-4 bg-white m-2 w-full flex flex-col justify-center text-center">-->
-<!--                    <p class="text-2xl text-amber-400 font-bold capitalize">see more in</p>-->
-<!--                    <h1  class="text-3xl text-green-900 font-medium capitalize">vishwarekha herbal</h1>-->
-<!--                    <img class="w-10 h-10 mx-auto" alt="see-more" src="./images/link-image.png" />-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+            <div class="mb-10 bg-blue-100">
+                <Carousel autoplay="4000">
+                    {#each colors as color, index (index)}
+                        <div class="flex justify-around rounded-lg p-2">
+                            <div class="item-card border border-green-900 rounded-xl p-4 bg-white m-2 w-full">
+                                <img alt="card-image" src={color.image}/>
+                                <h1 class="text-amber-400 text-lg capitalize font-medium">{color.label}</h1>
+                                <h2 class="text-black capitalize text-lg font-medium">{color.name}</h2>
+                                <p class="text-xl capitalize font-bold text-green-900 ">{color.price}</p>
+                            </div>
+                        </div>
+                    {/each}
+                </Carousel>
+            </div>
+        </div>
     </div>
 </section>
 <!--end of our companies section-->
 
 <!--start of icons section-->
-<!--<section class="w-full h-80 bg-amber-400" id="#about-icons">-->
-<!--    <div  class="flex h-80 bg-amber-400 justify-evenly m-auto items-center px-20">-->
-<!--        <img class="w-36 h-36 m-10 text-green-900" alt="icon1" src="./images/icon-image-1.svg"/>-->
-<!--        <img class="w-36 h-36 m-10 text-green-900" alt="icon2" src="./images/icon-image-2.svg"/>-->
-<!--        <img class="w-36 h-36 m-10 text-green-900" alt="icon3" src="./images/icon-image-3.svg"/>-->
-<!--        <img class="w-36 h-36 m-10 text-green-900" alt="icon4" src="./images/icon-image-4.svg"/>-->
-<!--        <img class="w-36 h-36 m-10 text-green-900" alt="icon5" src="./images/icon-image-5.svg"/>-->
-<!--        <img class="w-36 h-36 m-10 text-green-900" alt="icon6" src="./images/icon-image-6.svg"/>-->
-<!--    </div>-->
-<!--</section>-->
+<section class="w-full h-64 bg-amber-400 p-2 py-10 md:p-10" id="#about-icons">
+    <Carousel autoplay="2000">
+        {#each icons_section as icon, index (index)}
+                <img class="w-44 h-44 m-auto" alt="card-image" src={icon.image}/>
+        {/each}
+    </Carousel>
+</section>
 
 <!--<Swiper-->
 <!--        class="flex h-80 bg-amber-400 justify-evenly m-auto items-center px-20 flex items-center justify-evenly lg:hidden"-->
@@ -637,9 +542,9 @@
             <div class="flex mb-5 flex-col-reverse md:flex-row">
                 <div class="w-full">
                     <h3 class="text-lg text-amber-400">Information</h3>
-                    <a>Terms & Conditions</a>
+                    <a href="/">Terms & Conditions</a>
                     <br />
-                    <a>Privacy Policy</a>
+                    <a href="/">Privacy Policy</a>
                 </div>
                 <div class="w-full md:pl-24">
                     <img class="w-60 mb-2 sm:w-60 md:mb-0 md:w-96" alt="vishwarekha-logo"  src="./images/vishwarekha-logo.svg"/>
@@ -648,11 +553,11 @@
             <div class="flex flex-col md:flex-row">
                 <div class="w-full">
                     <h3 class="text-lg text-amber-400">Vishwarekha</h3>
-                    <a>Vishwarekha Herb</a>
+                    <a href="www.vishwarekhafood.com">Vishwarekha Herb</a>
                     <br />
-                    <a>Vishwarekha Food</a>
+                    <a href="www.vishwarekhafood.com">Vishwarekha Food</a>
                     <br />
-                    <a>Vishwarekha Real Life</a>
+                    <a href="www.vishwarekhafood.com">Vishwarekha Real Life</a>
                 </div>
                 <div class="w-full mt-4 md:pl-24 md:m-0">
                     <p class="text-sm text-gray-200">Monday - Friday: 8.00am - 5.30pm</p>
