@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,71 +25,7 @@ h1, h2, h3, h4, h5, h6, span{
     font-weight: bold;
 }
 
-nav a{
-    font-family: 'Signika', sans-serif;
-    text-decoration: none !important;
-    font-size: 20px;
-    border: none;
-}
-
 p{
     font-family: 'Poppins', sans-serif;
     line-height: 2;
-}
-
-
-.contact-us{
-    width: 100%;
-}
-
-.contact-us p, a{
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-}
-
-SwiperSlide{
-    width: 100%;
-    margin: 2px !important;
-    height: 100px  !important;
-}
-
-@media(min-width: 1024px){
-    .company-icon{
-        display: none;
-    }
-}
-
-@media(min-width: 1024px) and (max-width: 1315px){
-    .slider-text{
-        display: none;
-    }
-
-    .main-brand-cards{
-        display: none;
-    }
-}
-
-.slider-cards div{
-    width: 600px;
-    height: 400px;
-}
-
-@media(min-width:768px){
-    .item-card{
-        height:100% !important;
-        min-height: 350px;
-    }
-}
-
-@media(max-width: 768px) and (min-width: 1366px){
-    .item-card{
-        height:100% !important;
-        min-height: 300px;
-    }
-}
-
-@media(max-width: 1768px){
-    .item-card{
-        height:100%;
-    }
 }
