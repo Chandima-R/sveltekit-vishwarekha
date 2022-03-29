@@ -14,6 +14,10 @@ html{
 
 body{
     font-family: 'Signika', sans-serif;
+    transition: all ease-in-out 300ms;
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6, span{
@@ -21,8 +25,11 @@ h1, h2, h3, h4, h5, h6, span{
     font-weight: bold;
 }
 
-navbar a{
+nav a{
     font-family: 'Signika', sans-serif;
+    text-decoration: none !important;
+    font-size: 20px;
+    border: none;
 }
 
 p{
@@ -30,6 +37,38 @@ p{
     line-height: 2;
 }
 
+.contact-us{
+    width: 100%;
+}
+
 .contact-us p, a{
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+SwiperSlide{
+    width: 100%;
+    margin: 2px !important;
+    height: 100px  !important;
+}
+
+@media(min-width: 1024px){
+    .company-icon{
+        display: none;
+    }
+}
+
+@media(min-width: 1024px) and (max-width: 1315px){
+    .slider-text{
+        display: none;
+    }
+
+    .main-brand-cards{
+        display: none;
+    }
+}
+
+.slider-cards div{
+    width: 600px;
+    height: 400px;
 }
