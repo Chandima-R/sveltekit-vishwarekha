@@ -197,7 +197,7 @@
 </style>
 
 <!--start of navbar-->
-<nav class="nav-transparent h-16 lg:h-20 nav-default absolute w-full bg-green-900 flex items-center justify-between mt-0"
+<nav class="nav-transparent  h-16 lg:h-20 nav-default absolute w-full bg-green-900 flex items-center justify-between mt-0"
         id="nav">
   <a class="w-fit p-4 ml-0 lg:w-3/5 lg:ml-16 lg:p-0" href="/">
     <img alt="vishwarekha-logo" class="w-64" src="./images/vishwarekha-logo.svg"/>
