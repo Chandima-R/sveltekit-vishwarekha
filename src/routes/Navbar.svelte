@@ -47,6 +47,8 @@
 </script>
 
 <style>
+
+
   .mobile-icon {
     width: 25px;
     height: 14px;
@@ -130,8 +132,18 @@
     line-height: 2;
   }
 
+  .navbar-list li {
+    list-style-type: none;
+    position: relative;
+  }
+
   .navbar-list.mobile a {
     font-size: 25px;
+    text-decoration: none;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    padding: 0 10px;
   }
 
   .navbar-list.mobile a:hover {
@@ -159,7 +171,6 @@
 
     .navbar-list a {
       display: inline-flex;
-      text-decoration: none;
     }
   }
 
@@ -187,20 +198,20 @@
 
 <!--start of navbar-->
 <nav
-        className="nav-transparent h-16 lg:h-20 nav-default absolute w-full bg-green-900 flex items-center justify-between mt-0"
+        class="nav-transparent h-16 lg:h-20 nav-default absolute w-full bg-green-900 flex items-center justify-between mt-0"
         id="nav">
-  <a className="w-fit p-4 ml-0 lg:w-3/5 lg:ml-16 lg:p-0" href="/">
-    <img alt="vishwarekha-logo" className="w-64" src="./images/vishwarekha-logo.svg"/>
+  <a class="w-fit p-4 ml-0 lg:w-3/5 lg:ml-16 lg:p-0" href="/">
+    <img alt="vishwarekha-logo" class="w-64" src="./images/vishwarekha-logo.svg"/>
   </a>
   <div
-          className="bg-transparent w-full justify-end lg:bg-green-900 lg:max-w-screen-lg px-10 m-auto box-border flex items-center h-fit rounded-tl-full rounded-bl-full lg:px-20">
-    <div className={`mobile-icon${showMobileMenu ? ' active' : ''}`} on:click={handleMobileIconClick}>
-      <div className="middle-line"></div>
+          class="bg-transparent w-full justify-end lg:bg-green-900 lg:max-w-screen-lg px-10 m-auto box-border flex items-center h-fit rounded-tl-full rounded-bl-full lg:px-20">
+    <div class={`mobile-icon${showMobileMenu ? ' active' : ''}`} on:click={handleMobileIconClick}>
+      <div class="middle-line"></div>
     </div>
-    <ul className={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
+    <ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
       {#each navItems as item}
-        <li className="list-none relative">
-          <a className="text-white font-medium hover:text-amber-400" href={item.href}>{item.label}</a>
+        <li class="list-none relative">
+          <a class="text-white font-medium text-xl hover:text-amber-400" href={item.href}>{item.label}</a>
         </li>
       {/each}
     </ul>
