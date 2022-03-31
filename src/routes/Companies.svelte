@@ -1,13 +1,29 @@
 <script>
     import Carousel from "./Carousel.svelte";
 
-    let item_cards = [
-        {label: 'Food Supplement', name:"Yakinaran Tablets", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
-        {label: 'Food Supplement', name:"Traditional Turmeric Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
-        {label: 'Food Supplement', name:"Pepper Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
-        {label: 'Food Supplement', name:"Curry Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"},
-        {label: 'Food Supplement', name:"Curry Powder", price:"LKR 1200.00", image: "./images/card-image-1.jpg"}
+    let item_cards_herbal = [
+        {label: 'Herabl Meds', name:"Herbal Powder", price:"LKR 600.00", image: "./images/herbal/herbal-1.jpg"},
+        {label: 'Herabl Meds', name:"Snow Flakes", price:"LKR 350.00", image: "./images/herbal/herbal-2.jpg"},
+        {label: 'Herabl Meds', name:"Pepper Tablets", price:"LKR 400.00", image: "./images/herbal/herbal-3.jpg"},
+        {label: 'Herabl Meds', name:"Herbal Cerum Bluish", price:"LKR 700.00", image: "./images/herbal/herbal-4.jpg"},
+        {label: 'Herabl Meds', name:"Herbal Cerum Brownish", price:"LKR 550.00", image: "./images/herbal/herbal-5.jpg"}
     ]
+
+    let item_cards_food = [
+        {label: 'Pizza Mania', name:"Vegetable Crunchy Pizza", price:"LKR 695.00", image: "./images/food/food-1.jpg"},
+        {label: 'Burg Stack', name:"Veggy Cheezy Burger", price:"LKR 400.00", image: "./images/food/food-2.jpg"},
+        {label: 'Mexican Tortilla', name:"Taco Avacado", price:"LKR 660.00", image: "./images/food/food-3.jpg"},
+        {label: 'Healthy Diet', name:"Vegan Fried Rice", price:"LKR 800.00", image: "./images/food/food-4.jpg"},
+        {label: 'Relxation Salad', name:"Veggy Salad", price:"LKR 1200.00", image: "./images/food/food-5.jpg"}
+    ]
+
+    let item_cards_real_estate = [
+            {label: 'Summer Vacation', name:"Hot Sweet Cabana", price:"LKR 12000.00", image: "./images/real-estate/real-estate-1.jpg"},
+            {label: 'Ocean View', name:"Lake Before You", price:"LKR 10000.00", image: "./images/real-estate/real-estate-2.jpg"},
+            {label: 'Hill Country', name:"The Green Pathana", price:"LKR 16500.00", image: "./images/real-estate/real-estate-3.jpg"},
+            {label: 'Strong and Ancient', name:"Hard as Rock", price:"LKR 20000.00", image: "./images/real-estate/real-estate-4.jpg"},
+            {label: 'Beech Cave', name:"Simple and Calm", price:"LKR 12000.00", image: "./images/real-estate/real-estate-5.jpg"}
+        ]
 </script>
 
 <style>
@@ -46,7 +62,7 @@
         <h1 class="text-4xl font-light capitalize text-center text-green-900 mb-5 md:font-bold">our companies</h1>
         <div class="w-full mb-10 px-4 md:px-0">
             <div class="flex flex-col items-center mb-6 lg:flex-row">
-                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="bg-[url('/images/company-image-2.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha foods</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -58,13 +74,15 @@
             </div>
             <div class="bg-blue-100 rounded-lg">
                 <Carousel autoplay="4000">
-                    {#each item_cards as item, index (index)}
+                    {#each item_cards_food as food, index (index)}
                         <div class="flex justify-around rounded-lg p-2">
-                            <div class="item-card border border-green-900 rounded-lg p-4 bg-white m-2 w-full">
-                                <img alt="card-image" src={item.image}/>
-                                <h1 class="text-amber-400 text-lg capitalize font-medium">{item.label}</h1>
-                                <h2 class="text-black capitalize text-lg font-medium">{item.name}</h2>
-                                <p class="text-xl capitalize font-bold text-green-900 ">{item.price}</p>
+                            <div class="item-card shadow-sm shadow-blue-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
+                                <div class="bg-cover bg-center w-full h-48 rounded-lg" style="background-image: url({food.image}); " />
+                                <div class="p-4">
+                                    <h1 class="text-amber-400 text-lg capitalize font-medium">{food.label}</h1>
+                                    <h2 class="text-black capitalize text-lg font-medium">{food.name}</h2>
+                                    <p class="text-xl capitalize font-bold text-green-900 ">{food.price}</p>
+                                </div>
                             </div>
                         </div>
                     {/each}
@@ -76,7 +94,7 @@
 
         <div class="w-full my-10 px-4 md:px-0">
             <div class="flex flex-col items-center mb-6 lg:flex-row-reverse">
-                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="bg-[url('/images/company-image-5.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:mr-5 lg:ml-0">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha herbal</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -88,13 +106,15 @@
             </div>
             <div class="bg-blue-100 rounded-lg">
                 <Carousel autoplay="4000">
-                    {#each item_cards as item, index (index)}
+                    {#each item_cards_herbal as herbal, index (index)}
                         <div class="flex justify-around rounded-lg p-2">
-                            <div class="item-card border border-green-900 rounded-lg p-4 bg-white m-2 w-full">
-                                <img alt="card-image" src={item.image}/>
-                                <h1 class="text-amber-400 text-lg capitalize font-medium">{item.label}</h1>
-                                <h2 class="text-black capitalize text-lg font-medium">{item.name}</h2>
-                                <p class="text-xl capitalize font-bold text-green-900 ">{item.price}</p>
+                            <div class="item-card shadow-sm shadow-blue-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
+                                <div class="bg-cover bg-center w-full h-48 rounded-lg" style="background-image: url({herbal.image})" />
+                                <div class="p-4">
+                                    <h1 class="text-amber-400 text-lg capitalize font-medium">{herbal.label}</h1>
+                                    <h2 class="text-black capitalize text-lg font-medium">{herbal.name}</h2>
+                                    <p class="text-xl capitalize font-bold text-green-900 ">{herbal.price}</p>
+                                </div>
                             </div>
                         </div>
                     {/each}
@@ -106,7 +126,7 @@
 
         <div class="w-full my-10 px-4 md:px-0">
             <div class="flex flex-col items-center mb-6 lg:flex-row">
-                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="bg-[url('/images/company-image-3.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha real state</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -118,13 +138,15 @@
             </div>
             <div class="bg-blue-100 rounded-lg">
                 <Carousel autoplay="4000">
-                    {#each item_cards as item, index (index)}
+                    {#each item_cards_real_estate as real_estate, index (index)}
                         <div class="flex justify-around rounded-lg p-2">
-                            <div class="item-card border border-green-900 rounded-lg p-4 bg-white m-2 w-full">
-                                <img alt="card-image" src={item.image}/>
-                                <h1 class="text-amber-400 text-lg capitalize font-medium">{item.label}</h1>
-                                <h2 class="text-black capitalize text-lg font-medium">{item.name}</h2>
-                                <p class="text-xl capitalize font-bold text-green-900 ">{item.price}</p>
+                            <div class="item-card shadow-sm shadow-blue-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
+                                <div class="bg-cover bg-center w-full h-48 rounded-lg" style="background-image: url({real_estate.image})" />
+                                <div class="p-4">
+                                    <h1 class="text-amber-400 text-lg capitalize font-medium">{real_estate.label}</h1>
+                                    <h2 class="text-black capitalize text-lg font-medium">{real_estate.name}</h2>
+                                    <p class="text-xl capitalize font-bold text-green-900 ">{real_estate.price}</p>
+                                </div>
                             </div>
                         </div>
                     {/each}

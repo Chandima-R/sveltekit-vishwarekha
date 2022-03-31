@@ -96,10 +96,11 @@
             selector: siema,
             // perPage: typeof perPage === 'object' ? perPage : Number(perPage),
             perPage: {
-                375: 2,
-                768: 3,
-                1024: 4,
-                1500: 5
+                640: 1,
+                768: 2,
+                1024: 3,
+                1280: 4,
+                1536: 5
             },
             loop,
             duration,
