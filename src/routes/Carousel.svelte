@@ -67,18 +67,6 @@
     import Siema from 'siema'
     import {onMount, createEventDispatcher} from 'svelte'
 
-    function selectCardsPerScreen(){
-        if(window.innerWidth <= 375 ){
-            return perPage = 1;
-        }else if(window.innerWidth <= 768){
-            return perPage = 2;
-        }else if(window.innerWidth <= 1024){
-            return perPage = 3;
-        }else {
-            return perPage = 6;
-        }
-    }
-
     export let perPage = 5
     export let loop = true
     export let autoplay = 0
@@ -109,9 +97,9 @@
             // perPage: typeof perPage === 'object' ? perPage : Number(perPage),
             perPage: {
                 375: 2,
-                768:3,
+                768: 3,
                 1024: 4,
-                1500:5
+                1500: 5
             },
             loop,
             duration,

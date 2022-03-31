@@ -11,23 +11,24 @@
 </script>
 
 <style>
-    @media(min-width:768px){
+    @media(max-width:768px){
+        .item-card{
+            height:100% !important;
+            min-height: 340px;
+        }
+    }
+
+    @media(min-width: 768px) and (min-width: 1366px){
         .item-card{
             height:100% !important;
             min-height: 350px;
         }
     }
 
-    @media(max-width: 768px) and (min-width: 1366px){
-        .item-card{
-            height:100% !important;
-            min-height: 300px;
-        }
-    }
-
     @media(max-width: 1768px){
         .item-card{
             height:100%;
+            height: 350px;
         }
     }
 
@@ -36,17 +37,18 @@
             margin-top: 15rem;
         }
     }
+
 </style>
 
 <!--start of our companies section-->
 <section class="bg-green-50" id="companies">
-    <div class="w-full md:w-4/5 m-auto py-10">
+    <div class="w-full px-4 md:w-4/5 m-auto py-10">
         <h1 class="text-4xl font-light capitalize text-center text-green-900 mb-5 md:font-bold">our companies</h1>
         <div class="w-full mb-10">
             <div class="flex flex-col items-center mb-10 lg:flex-row">
                 <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
                 </div>
-                <div class="w-full p-2 lg:p-5">
+                <div class="w-full p-2 lg:p-5t">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2  text-green-900">vishwarekha foods</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <button class="flex justify-center text-center text-green-900">
