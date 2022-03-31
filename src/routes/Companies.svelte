@@ -44,12 +44,11 @@
 <section class="bg-green-50" id="companies">
     <div class="w-full px-4 md:w-4/5 m-auto py-10">
         <h1 class="text-4xl font-light capitalize text-center text-green-900 mb-5 md:font-bold">our companies</h1>
-        <div class="w-full mb-10">
-            <div class="flex flex-col items-center mb-10 lg:flex-row">
-                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
-                </div>
-                <div class="w-full p-2 lg:p-5t">
-                    <h1 class="text-2xl font-light md:font-bold capitalize mb-2  text-green-900">vishwarekha foods</h1>
+        <div class="w-full mb-10 px-4 md:px-0">
+            <div class="flex flex-col items-center mb-6 lg:flex-row">
+                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
+                    <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha foods</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <button class="flex justify-center text-center text-green-900">
                         <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
@@ -57,7 +56,7 @@
                     </button>
                 </div>
             </div>
-            <div class="mb-10 bg-blue-100 rounded-lg">
+            <div class="bg-blue-100 rounded-lg">
                 <Carousel autoplay="4000">
                     {#each item_cards as item, index (index)}
                         <div class="flex justify-around rounded-lg p-2">
@@ -72,12 +71,14 @@
                 </Carousel>
             </div>
         </div>
-        <div class="w-full mb-10">
-            <div class="flex flex-col mb-10 lg:flex-row-reverse">
-                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
-                </div>
-                <div class="w-full p-2 lg:p-5">
-                    <h1 class="text-2xl font-light md:font-bold capitalize mb-2  text-green-900">vishwarekha real estate</h1>
+
+        <hr class="bg-green-900 border-none rounded-full h-1 shadow-xl shadow-green-900/100" />
+
+        <div class="w-full my-10 px-4 md:px-0">
+            <div class="flex flex-col items-center mb-6 lg:flex-row-reverse">
+                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:mr-5 lg:ml-0">
+                    <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha herbal</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <button class="flex justify-center text-center text-green-900">
                         <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
@@ -85,7 +86,7 @@
                     </button>
                 </div>
             </div>
-            <div class="mb-10 bg-blue-100 rounded-lg">
+            <div class="bg-blue-100 rounded-lg">
                 <Carousel autoplay="4000">
                     {#each item_cards as item, index (index)}
                         <div class="flex justify-around rounded-lg p-2">
@@ -100,12 +101,14 @@
                 </Carousel>
             </div>
         </div>
-        <div class="w-full mb-10">
-            <div class="flex flex-col mb-10 lg:flex-row">
-                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
-                </div>
-                <div class="w-full p-2 lg:p-5">
-                    <h1 class="text-2xl font-light md:font-bold capitalize mb-2  text-green-900">vishwarekha herbal</h1>
+
+        <hr class="bg-green-900 border-none rounded-full h-1 shadow-xl shadow-green-900/100" />
+
+        <div class="w-full my-10 px-4 md:px-0">
+            <div class="flex flex-col items-center mb-6 lg:flex-row">
+                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
+                    <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha real state</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <button class="flex justify-center text-center text-green-900">
                         <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
@@ -113,7 +116,7 @@
                     </button>
                 </div>
             </div>
-            <div class="mb-10 bg-blue-100 rounded-lg">
+            <div class="bg-blue-100 rounded-lg">
                 <Carousel autoplay="4000">
                     {#each item_cards as item, index (index)}
                         <div class="flex justify-around rounded-lg p-2">
@@ -128,6 +131,9 @@
                 </Carousel>
             </div>
         </div>
+
+        <hr class="bg-green-900 border-none rounded-full h-1 shadow-xl shadow-green-900/100" />
+
     </div>
 </section>
 <!--end of our companies section-->
