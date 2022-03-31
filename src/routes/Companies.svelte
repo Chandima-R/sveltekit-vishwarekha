@@ -2,27 +2,27 @@
     import Carousel from "./Carousel.svelte";
 
     let item_cards_herbal = [
-        {label: 'Herabl Meds', name:"Herbal Powder", price:"LKR 600.00", image: "./images/herbal/herbal-1.jpg"},
-        {label: 'Herabl Meds', name:"Snow Flakes", price:"LKR 350.00", image: "./images/herbal/herbal-2.jpg"},
-        {label: 'Herabl Meds', name:"Pepper Tablets", price:"LKR 400.00", image: "./images/herbal/herbal-3.jpg"},
-        {label: 'Herabl Meds', name:"Herbal Cerum Bluish", price:"LKR 700.00", image: "./images/herbal/herbal-4.jpg"},
-        {label: 'Herabl Meds', name:"Herbal Cerum Brownish", price:"LKR 550.00", image: "./images/herbal/herbal-5.jpg"}
+        {label: 'Herabl Meds', name:"Herbal Powder", price:"LKR 600.00", image: "/images/herbal/herbal-1.jpg"},
+        {label: 'Herabl Meds', name:"Snow Flakes", price:"LKR 350.00", image: "/images/herbal/herbal-2.jpg"},
+        {label: 'Herabl Meds', name:"Pepper Tablets", price:"LKR 400.00", image: "/images/herbal/herbal-3.jpg"},
+        {label: 'Herabl Meds', name:"Herbal Cerum Bluish", price:"LKR 700.00", image: "/images/herbal/herbal-4.jpg"},
+        {label: 'Herabl Meds', name:"Herbal Cerum Brownish", price:"LKR 550.00", image: "/images/herbal/herbal-5.jpg"}
     ]
 
     let item_cards_food = [
-        {label: 'Pizza Mania', name:"Vegetable Crunchy Pizza", price:"LKR 695.00", image: "./images/food/food-1.jpg"},
-        {label: 'Burg Stack', name:"Veggy Cheezy Burger", price:"LKR 400.00", image: "./images/food/food-2.jpg"},
-        {label: 'Mexican Tortilla', name:"Taco Avacado", price:"LKR 660.00", image: "./images/food/food-3.jpg"},
-        {label: 'Healthy Diet', name:"Vegan Fried Rice", price:"LKR 800.00", image: "./images/food/food-4.jpg"},
-        {label: 'Relxation Salad', name:"Veggy Salad", price:"LKR 1200.00", image: "./images/food/food-5.jpg"}
+        {label: 'Pizza Mania', name:"Vegetable Crunchy Pizza", price:"LKR 695.00", image: "/images/food/food-1.jpg"},
+        {label: 'Burg Stack', name:"Veggy Cheezy Burger", price:"LKR 400.00", image: "/images/food/food-2.jpg"},
+        {label: 'Mexican Tortilla', name:"Taco Avacado", price:"LKR 660.00", image: "/images/food/food-3.jpg"},
+        {label: 'Healthy Diet', name:"Vegan Fried Rice", price:"LKR 800.00", image: "/images/food/food-4.jpg"},
+        {label: 'Relxation Salad', name:"Veggy Salad", price:"LKR 1200.00", image: "/images/food/food-5.jpg"}
     ]
 
     let item_cards_real_estate = [
-            {label: 'Summer Vacation', name:"Hot Sweet Cabana", price:"LKR 12000.00", image: "./images/real-estate/real-estate-1.jpg"},
-            {label: 'Ocean View', name:"Lake Before You", price:"LKR 10000.00", image: "./images/real-estate/real-estate-2.jpg"},
-            {label: 'Hill Country', name:"The Green Pathana", price:"LKR 16500.00", image: "./images/real-estate/real-estate-3.jpg"},
-            {label: 'Strong and Ancient', name:"Hard as Rock", price:"LKR 20000.00", image: "./images/real-estate/real-estate-4.jpg"},
-            {label: 'Beech Cave', name:"Simple and Calm", price:"LKR 12000.00", image: "./images/real-estate/real-estate-5.jpg"}
+            {label: 'Summer Vacation', name:"Hot Sweet Cabana", price:"LKR 12000.00", image: "/images/real-estate/real-estate-1.jpg"},
+            {label: 'Ocean View', name:"Lake Before You", price:"LKR 10000.00", image: "/images/real-estate/real-estate-2.jpg"},
+            {label: 'Hill Country', name:"The Green Pathana", price:"LKR 16500.00", image: "/images/real-estate/real-estate-3.jpg"},
+            {label: 'Strong and Ancient', name:"Hard as Rock", price:"LKR 20000.00", image: "/images/real-estate/real-estate-4.jpg"},
+            {label: 'Beech Cave', name:"Simple and Calm", price:"LKR 12000.00", image: "/images/real-estate/real-estate-5.jpg"}
         ]
 </script>
 
