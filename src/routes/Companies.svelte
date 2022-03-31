@@ -44,7 +44,7 @@
         <h1 class="text-4xl font-light capitalize text-center text-green-900 mb-5 md:font-bold">our companies</h1>
         <div class="w-full mb-10">
             <div class="flex flex-col items-center mb-10 lg:flex-row">
-                <div class="bg-[url('./images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
+                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
                 </div>
                 <div class="w-full p-2 lg:p-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2  text-green-900">vishwarekha foods</h1>
@@ -72,7 +72,7 @@
         </div>
         <div class="w-full mb-10">
             <div class="flex flex-col mb-10 lg:flex-row-reverse">
-                <div class="bg-[url('./images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
+                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
                 </div>
                 <div class="w-full p-2 lg:p-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2  text-green-900">vishwarekha real estate</h1>
@@ -100,7 +100,7 @@
         </div>
         <div class="w-full mb-10">
             <div class="flex flex-col mb-10 lg:flex-row">
-                <div class="bg-[url('./images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
+                <div class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5">
                 </div>
                 <div class="w-full p-2 lg:p-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2  text-green-900">vishwarekha herbal</h1>
