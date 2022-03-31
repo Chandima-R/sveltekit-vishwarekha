@@ -2,12 +2,12 @@
     import Carousel from "./Carousel.svelte";
 
     let icons_section = [
-        {label: 'icon1', image: "./images/icon-image-1.svg"},
-        {label: 'icon2', image: "./images/icon-image-2.svg"},
-        {label: 'icon3', image: "./images/icon-image-3.svg"},
-        {label: 'icon4', image: "./images/icon-image-4.svg"},
-        {label: 'icon5', image: "./images/icon-image-5.svg"},
-        {label: 'icon6', image: "./images/icon-image-6.svg"},
+        {label: 'icon1', image: "/images/icon-slider/icon-image-1.svg"},
+        {label: 'icon2', image: "/images/icon-slider/icon-image-2.svg"},
+        {label: 'icon3', image: "/images/icon-slider/icon-image-3.svg"},
+        {label: 'icon4', image: "/images/icon-slider/icon-image-4.svg"},
+        {label: 'icon5', image: "/images/icon-slider/icon-image-5.svg"},
+        {label: 'icon6', image: "/images/icon-slider/icon-image-6.svg"},
     ]
 </script>
 

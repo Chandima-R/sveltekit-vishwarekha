@@ -1,4 +1,7 @@
 <style>
+  .main-carousel{
+    height: 700px;
+  }
   @media (min-width: 1024px) {
     .company-icon {
       display: none;
@@ -22,10 +25,20 @@
     height: 400px;
   }
 
+  .slider-sub-image{
+    cursor: pointer;
+    transition: transform 200ms;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .slider-sub-image:hover{
+    transform: translateY(-15px);
+    z-index: 100;
+  }
 </style>
 
 <!--start of slider section-->
-<section class="bg-[url('/images/slider-image-1.jpg')] bg-cover flex flex-col m-auto" id="home">
+<section class="main-carousel bg-[url('/images/main-carousel/slider-image-2.jpg')] bg-cover flex flex-col m-auto" id="home">
   <div
           class="flex flex-col h-fits w-full pt-30 px-2 md:py-14 md:pt-36 lg:pt-44 lg:px-24 lg:w-full lg:pb-60 lg:flex-row">
     <div class="slider-text w-full h-fit bg-green-900/30 p-4 rounded-lg mb-4 lg:w-3/5">
@@ -50,11 +63,11 @@
 
     <div class="slider-cards w-full relative invisible lg:visible">
       <div
-              class="bg-[url('/images/slider-image-1.jpg')] bg-cover bg-current w-full h-full border border-white rounded-lg shadow-xl shadow-green-900/50 absolute top-0 right-0 z-10"></div>
+              class="slider-sub-image bg-[url('/images/main-carousel/slider-image-2.jpg')] bg-cover bg-current w-full h-full border border-white rounded-lg shadow-xl shadow-green-900/50 absolute top-0 right-0 z-10"></div>
       <div
-              class="bg-[url('/images/slider-image-2.jpg')] bg-cover bg-current w-full h-full border border-white rounded-lg shadow-xl shadow-green-900/50 absolute top-32 right-20 z-10"></div>
+              class="slider-sub-image bg-[url('/images/main-carousel/slider-image-1.jpg')] bg-cover bg-current w-full h-full border border-white rounded-lg shadow-xl shadow-green-900/50 absolute top-32 right-20 z-10"></div>
       <div
-              class="bg-[url('/images/slider-image-3.jpg')] bg-cover bg-current w-full h-full border border-white rounded-lg shadow-xl shadow-green-900/50 absolute top-64 right-40 z-20"></div>
+              class="slider-sub-image bg-[url('/images/main-carousel/slider-image-5.jpg')] bg-cover bg-current w-full h-full border border-white rounded-lg shadow-xl shadow-green-900/50 absolute top-64 right-40 z-20"></div>
     </div>
   </div>
 </section>
