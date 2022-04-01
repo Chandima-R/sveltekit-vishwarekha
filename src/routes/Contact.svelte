@@ -28,9 +28,9 @@
                     <div class="w-full md:pl-24">
                         <h3 class="text-lg text-amber-400">Follow Us</h3>
                         <div class="flex">
-                            <img class="w-10 h-10 mr-5 cursor-pointer" alt="twitter-icon" src="./images/icon-twitter.png"/>
-                            <img class="w-10 h-10 mr-5 cursor-pointer" alt="facebook-icon" src="./images/icon-facebook.png"/>
-                            <img class="w-10 h-10 mr-5 cursor-pointer" alt="linkedin-icon" src="./images/icon-linkedin.png"/>
+                            <img class="w-10 h-10 mr-5 cursor-pointer" alt="twitter-icon" src="./images/footer/icon-twitter.png"/>
+                            <img class="w-10 h-10 mr-5 cursor-pointer" alt="facebook-icon" src="./images/footer/icon-facebook.png"/>
+                            <img class="w-10 h-10 mr-5 cursor-pointer" alt="linkedin-icon" src="./images/footer/icon-linkedin.png"/>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <a href="/">Privacy Policy</a>
                 </div>
                 <div class="w-full md:pl-24">
-                    <img class="w-60 mb-2 sm:w-60 md:mb-0 md:w-96" alt="vishwarekha-logo"  src="./images/vishwarekha-logo.svg"/>
+                    <img class="w-60 mb-2 sm:w-60 md:mb-0 md:w-96" alt="vishwarekha-logo"  src="./images/footer/vishwarekha-logo.svg"/>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row">

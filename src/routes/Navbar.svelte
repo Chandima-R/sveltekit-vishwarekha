@@ -33,7 +33,7 @@
 
     window.onscroll = function () {
       "use strict";
-      if (document.body.scrollTop >= 150 || document.documentElement.scrollTop) {
+      if (document.body.scrollTop >= 200 || document.documentElement.scrollTop) {
         navbar.classList.add("nav-colored");
         navbar.classList.remove("nav-transparent");
       } else {
@@ -48,10 +48,9 @@
 
 <style>
 
-
   .mobile-icon {
-    width: 25px;
-    height: 14px;
+    width: 30px;
+    height: 20px;
     position: relative;
     cursor: pointer;
   }
@@ -61,10 +60,10 @@
   .middle-line {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 2px;
+    width: 125%;
+    height: 3px;
     background-color: #fff;
-    transition: all 0.4s;
+    transition: all 0.5s ease-in-out;
     transform-origin: center;
   }
 
@@ -119,35 +118,42 @@
   .navbar-list.mobile {
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 10vh;
+    top: calc(100% + 0px);
     height: 100vh;
     bottom: 0;
     left: 0;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    line-height: 2;
   }
 
-  .navbar-list li {
+  .navbar-list .mobile li {
     list-style-type: none;
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .navbar-list.mobile a {
-    font-size: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
     text-decoration: none;
     display: flex;
     height: 45px;
     align-items: center;
     padding: 0 10px;
+    text-transform: uppercase;
   }
 
-  .navbar-list.mobile a:hover {
-    color: #ffb300;
+  .navbar-list .mobile li:hover {
+    color: #ffb300 !important;
+    background-color: white !important;
   }
 
   .navbar-list li:before {
@@ -179,6 +185,7 @@
     position: sticky;
     top: 0 !important;
     z-index: 1000;
+    transition: 0.5s ease-in-out;
   }
 
   .nav-transparent {
@@ -192,6 +199,15 @@
     nav {
       position: sticky;
       top: 0 !important;
+    }
+
+    .navbar-list li {
+      list-style-type: none;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
     }
   }
 </style>

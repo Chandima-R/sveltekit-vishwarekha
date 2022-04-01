@@ -27,6 +27,9 @@
 </script>
 
 <style>
+    hr{
+    height: 1px;
+    }
 
     .item-card{
         cursor: pointer;
@@ -36,7 +39,7 @@
 
     .item-card:hover{
         transform: translateY(-15px);
-        box-shadow: 0px 10px 10px rgba(59,130,246, 0.25);
+        box-shadow: 0px 10px 10px rgba(34,197,94, 0.25);
     }
 
     @media(max-width:768px){
@@ -80,15 +83,15 @@
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <button class="flex justify-center text-center text-green-900">
                         <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
-                        <img class="w-6 h-6" alt="see-more" src="./images/link-image.png" />
+                        <img class="w-6 h-6" alt="see-more" src="/images/companies/link-image.png" />
                     </button>
                 </div>
             </div>
-            <div class="bg-blue-100 rounded-lg">
+            <div class="rounded-lg">
                 <Carousel autoplay="4000">
                     {#each item_cards_food as food, index (index)}
-                        <div class="flex justify-around rounded-lg p-2">
-                            <div class="item-card shadow-sm shadow-blue-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
+                        <div class="flex justify-around rounded-lg">
+                            <div class="item-card shadow-sm shadow-green-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
                                 <div class="bg-cover bg-center w-full h-48 rounded-lg" style="background-image: url({food.image}); " />
                                 <div class="p-4">
                                     <h1 class="text-amber-400 text-lg capitalize font-medium">{food.label}</h1>
@@ -112,15 +115,15 @@
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <button class="flex justify-center text-center text-green-900">
                         <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
-                        <img class="w-6 h-6" alt="see-more" src="./images/link-image.png" />
+                        <img class="w-6 h-6" alt="see-more" src="/images/companies/link-image.png" />
                     </button>
                 </div>
             </div>
-            <div class="bg-blue-100 rounded-lg">
+            <div class="rounded-lg">
                 <Carousel autoplay="4000">
                     {#each item_cards_herbal as herbal, index (index)}
-                        <div class="flex justify-around rounded-lg p-2">
-                            <div class="item-card shadow-sm shadow-blue-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
+                        <div class="flex justify-around rounded-lg">
+                            <div class="item-card shadow-sm shadow-green-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
                                 <div class="bg-cover bg-center w-full h-48 rounded-lg" style="background-image: url({herbal.image})" />
                                 <div class="p-4">
                                     <h1 class="text-amber-400 text-lg capitalize font-medium">{herbal.label}</h1>
@@ -134,7 +137,7 @@
             </div>
         </div>
 
-        <hr class="bg-green-900 border-none rounded-full h-1 shadow-xl shadow-green-900/100" />
+        <hr class="bg-green-900 border-none rounded-full shadow-xl shadow-green-900/100" />
 
         <div class="w-full my-10 px-4 md:px-0">
             <div class="flex flex-col items-center mb-6 lg:flex-row">
@@ -144,15 +147,15 @@
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <button class="flex justify-center text-center text-green-900">
                         <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
-                        <img class="w-6 h-6" alt="see-more" src="./images/link-image.png" />
+                        <img class="w-6 h-6" alt="see-more" src="/images/companies/link-image.png" />
                     </button>
                 </div>
             </div>
-            <div class="bg-blue-100 rounded-lg">
+            <div class="rounded-lg">
                 <Carousel autoplay="4000">
                     {#each item_cards_real_estate as real_estate, index (index)}
-                        <div class="flex justify-around rounded-lg p-2">
-                            <div class="item-card shadow-sm shadow-blue-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
+                        <div class="flex justify-around rounded-lg">
+                            <div class="item-card shadow-sm shadow-green-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
                                 <div class="bg-cover bg-center w-full h-48 rounded-lg" style="background-image: url({real_estate.image})" />
                                 <div class="p-4">
                                     <h1 class="text-amber-400 text-lg capitalize font-medium">{real_estate.label}</h1>
@@ -166,7 +169,7 @@
             </div>
         </div>
 
-        <hr class="bg-green-900 border-none rounded-full h-1 shadow-xl shadow-green-900/100" />
+        <hr class="bg-green-900 border-none rounded-full shadow-xl shadow-green-900/100" />
 
     </div>
 </section>
