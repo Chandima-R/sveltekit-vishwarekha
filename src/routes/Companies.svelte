@@ -2,27 +2,27 @@
     import Carousel from "./Carousel.svelte";
 
     let item_cards_herbal = [
-        {label: 'Herabl Meds', name:"Herbal Powder", price:"LKR 600.00", image: "/images/companies/herbal/herbal-1.jpg"},
-        {label: 'Herabl Meds', name:"Snow Flakes", price:"LKR 350.00", image: "/images/companies/herbal/herbal-2.jpg"},
-        {label: 'Herabl Meds', name:"Pepper Tablets", price:"LKR 400.00", image: "/images/companies/herbal/herbal-3.jpg"},
-        {label: 'Herabl Meds', name:"Herbal Cerum Bluish", price:"LKR 700.00", image: "/images/companies/herbal/herbal-4.jpg"},
-        {label: 'Herabl Meds', name:"Herbal Cerum Brownish", price:"LKR 550.00", image: "/images/companies/herbal/herbal-5.jpg"}
+        {label: 'Herabl Meds', name:"Herbal Powder", price:"LKR 600.00", image: "./images/companies/herbal/herbal-1.jpg"},
+        {label: 'Herabl Meds', name:"Snow Flakes", price:"LKR 350.00", image: "./images/companies/herbal/herbal-2.jpg"},
+        {label: 'Herabl Meds', name:"Pepper Tablets", price:"LKR 400.00", image: "./images/companies/herbal/herbal-3.jpg"},
+        {label: 'Herabl Meds', name:"Herbal Cerum Bluish", price:"LKR 700.00", image: "./images/companies/herbal/herbal-4.jpg"},
+        {label: 'Herabl Meds', name:"Herbal Cerum Brownish", price:"LKR 550.00", image: "./images/companies/herbal/herbal-5.jpg"}
     ]
 
     let item_cards_food = [
-        {label: 'Pizza Mania', name:"Vegetable Crunchy Pizza", price:"LKR 695.00", image: "/images/companies/food/food-1.jpg"},
-        {label: 'Burg Stack', name:"Veggy Cheezy Burger", price:"LKR 400.00", image: "/images/companies/food/food-2.jpg"},
-        {label: 'Mexican Tortilla', name:"Taco Avacado", price:"LKR 660.00", image: "/images/companies/food/food-3.jpg"},
-        {label: 'Healthy Diet', name:"Vegan Fried Rice", price:"LKR 800.00", image: "/images/companies/food/food-4.jpg"},
-        {label: 'Relxation Salad', name:"Veggy Salad", price:"LKR 1200.00", image: "/images/companies/food/food-5.jpg"}
+        {label: 'Pizza Mania', name:"Vegetable Crunchy Pizza", price:"LKR 695.00", image: "./images/companies/food/food-1.jpg"},
+        {label: 'Burg Stack', name:"Veggy Cheezy Burger", price:"LKR 400.00", image: "./images/companies/food/food-2.jpg"},
+        {label: 'Mexican Tortilla', name:"Taco Avacado", price:"LKR 660.00", image: "./images/companies/food/food-3.jpg"},
+        {label: 'Healthy Diet', name:"Vegan Fried Rice", price:"LKR 800.00", image: "./images/companies/food/food-4.jpg"},
+        {label: 'Relxation Salad', name:"Veggy Salad", price:"LKR 1200.00", image: "./images/companies/food/food-5.jpg"}
     ]
 
     let item_cards_real_estate = [
-            {label: 'Summer Vacation', name:"Hot Sweet Cabana", price:"LKR 12000.00", image: "/images/companies/real-estate/real-estate-1.jpg"},
-            {label: 'Ocean View', name:"Lake Before You", price:"LKR 10000.00", image: "/images/companies/real-estate/real-estate-2.jpg"},
-            {label: 'Hill Country', name:"The Green Pathana", price:"LKR 16500.00", image: "/images/companies/real-estate/real-estate-3.jpg"},
-            {label: 'Strong and Ancient', name:"Hard as Rock", price:"LKR 20000.00", image: "/images/companies/real-estate/real-estate-4.jpg"},
-            {label: 'Beech Cave', name:"Simple and Calm", price:"LKR 12000.00", image: "/images/companies/real-estate/real-estate-5.jpg"}
+            {label: 'Summer Vacation', name:"Hot Sweet Cabana", price:"LKR 12000.00", image: "./images/companies/real-estate/real-estate-1.jpg"},
+            {label: 'Ocean View', name:"Lake Before You", price:"LKR 10000.00", image: "./images/companies/real-estate/real-estate-2.jpg"},
+            {label: 'Hill Country', name:"The Green Pathana", price:"LKR 16500.00", image: "./images/companies/real-estate/real-estate-3.jpg"},
+            {label: 'Strong and Ancient', name:"Hard as Rock", price:"LKR 20000.00", image: "./images/companies/real-estate/real-estate-4.jpg"},
+            {label: 'Beech Cave', name:"Simple and Calm", price:"LKR 12000.00", image: "./images/companies/real-estate/real-estate-5.jpg"}
         ]
 </script>
 
@@ -77,7 +77,7 @@
         <h1 class="text-4xl font-light capitalize text-center text-green-900 mb-5 md:font-bold">our companies</h1>
         <div class="w-full mb-10 px-4 md:px-0">
             <div class="flex flex-col items-center mb-6 lg:flex-row">
-                <div class="bg-[url('/images/companies/company-image-2.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="bg-[url('./images/companies/company-image-2.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha foods</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -109,7 +109,7 @@
 
         <div class="w-full my-10 px-4 md:px-0">
             <div class="flex flex-col items-center mb-6 lg:flex-row-reverse">
-                <div class="bg-[url('/images/companies/company-image-5.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="bg-[url('./images/companies/company-image-5.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:mr-5 lg:ml-0">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha herbal</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -141,7 +141,7 @@
 
         <div class="w-full my-10 px-4 md:px-0">
             <div class="flex flex-col items-center mb-6 lg:flex-row">
-                <div class="bg-[url('/images/companies/company-image-3.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
+                <div class="bg-[url('./images/companies/company-image-3.jpg')] bg-cover bg-center w-full h-96 rounded-lg p-2 lg:p-5" />
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha real state</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
