@@ -1,68 +1,75 @@
+<script context="module">
+  export async function load({fetch}){
+    const res = await fetch('/api/Products');
+    const products = await res.json();
+
+    return {
+      props: {
+        products
+      }
+    }
+  }
+
+</script>
+
 <script>
-    import Carousel from "./Carousel.svelte";
 
-    let item_cards_herbal = [
-        {label: 'Herabl Meds', name:"Herbal Powder", price:"LKR 600.00", image: "./images/companies/herbal/herbal-1.jpg"},
-        {label: 'Herabl Meds', name:"Snow Flakes", price:"LKR 350.00", image: "./images/companies/herbal/herbal-2.jpg"},
-        {label: 'Herabl Meds', name:"Pepper Tablets", price:"LKR 400.00", image: "./images/companies/herbal/herbal-3.jpg"},
-        {label: 'Herabl Meds', name:"Herbal Cerum Bluish", price:"LKR 700.00", image: "./images/companies/herbal/herbal-4.jpg"},
-        {label: 'Herabl Meds', name:"Herbal Cerum Brownish", price:"LKR 550.00", image: "./images/companies/herbal/herbal-5.jpg"}
-    ]
+  import Carousel from "../modules/Carousel.svelte";
+  import Products from "./Products.svelte";
+  export let products;
 
-    let item_cards_food = [
-        {label: 'Pizza Mania', name:"Vegetable Crunchy Pizza", price:"LKR 695.00", image: "./images/companies/food/food-1.jpg"},
-        {label: 'Burg Stack', name:"Veggy Cheezy Burger", price:"LKR 400.00", image: "./images/companies/food/food-2.jpg"},
-        {label: 'Mexican Tortilla', name:"Taco Avacado", price:"LKR 660.00", image: "./images/companies/food/food-3.jpg"},
-        {label: 'Healthy Diet', name:"Vegan Fried Rice", price:"LKR 800.00", image: "./images/companies/food/food-4.jpg"},
-        {label: 'Relxation Salad', name:"Veggy Salad", price:"LKR 1200.00", image: "./images/companies/food/food-5.jpg"}
-    ]
+  let product_values = Object.values(products);
 
-    let item_cards_real_estate = [
-            {label: 'Summer Vacation', name:"Hot Sweet Cabana", price:"LKR 12000.00", image: "./images/companies/real-estate/real-estate-1.jpg"},
-            {label: 'Ocean View', name:"Lake Before You", price:"LKR 10000.00", image: "./images/companies/real-estate/real-estate-2.jpg"},
-            {label: 'Hill Country', name:"The Green Pathana", price:"LKR 16500.00", image: "./images/companies/real-estate/real-estate-3.jpg"},
-            {label: 'Strong and Ancient', name:"Hard as Rock", price:"LKR 20000.00", image: "./images/companies/real-estate/real-estate-4.jpg"},
-            {label: 'Beech Cave', name:"Simple and Calm", price:"LKR 12000.00", image: "./images/companies/real-estate/real-estate-5.jpg"}
-        ]
+  let product_array = product_values[0];
+  let shuffled_product_array = product_array.sort(() => Math.random() - 0.5);
+
 </script>
 
 <style>
+  .item-card{
+     cursor: pointer;
+     transition: transform 200ms;
+     transition: all 0.5s ease-in-out;
+   }
+
+   .item-card:hover{
+     transform: translateY(-15px);
+     box-shadow: 0px 10px 10px rgba(34,197,94, 0.25);
+   }
+
+   .image-container{
+     background-position: center;
+     background-size: cover;
+     height: 100%;
+   }
+
+   .description-container{
+     height: 100% !important;
+     width: 100%;
+   }
+
+   @media(max-width:768px){
+     .item-card{
+       height:100% !important;
+       min-height: 360px;
+     }
+   }
+
+   @media(min-width: 768px){
+     .item-card{
+       height:100% !important;
+       min-height: 450px;
+  }
+
+    .description-container{
+      height: 180px !important;
+    }
+  }
+
     hr{
     height: 1px;
     }
-
-    .item-card{
-        cursor: pointer;
-        transition: transform 200ms;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .item-card:hover{
-        transform: translateY(-15px);
-        box-shadow: 0px 10px 10px rgba(34,197,94, 0.25);
-    }
-
-    @media(max-width:768px){
-        .item-card{
-            height:100% !important;
-            min-height: 340px;
-        }
-    }
-
-    @media(min-width: 768px) and (min-width: 1366px){
-        .item-card{
-            height:100% !important;
-            min-height: 350px;
-        }
-    }
-
-    @media(max-width: 1768px){
-        .item-card{
-            height:100%;
-            height: 350px;
-        }
-    }
-
+    
     @media(min-width: 1024px) and (max-width:1316px){
     #companies{
             margin-top: 15rem;
@@ -88,7 +95,7 @@
                 </div>
             </div>
             <div class="rounded-lg">
-                <Carousel autoplay="4000">
+                <!-- <Carousel autoplay="4000">
                     {#each item_cards_food as food, index (index)}
                         <div class="flex justify-around rounded-lg">
                             <div class="item-card shadow-sm shadow-green-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
@@ -101,7 +108,27 @@
                             </div>
                         </div>
                     {/each}
-                </Carousel>
+                </Carousel> -->
+                <section>
+                  <Carousel autoplay="4000">
+                 
+                    {#each shuffled_product_array as product}
+                    {#if product.status == "publish"}
+                      <div class="flex justify-around rounded-lg">
+                        <div class="item-card shadow-sm shadow-green-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
+                          <img class="image-container bg-cover bg-center w-full h-48 rounded-lg" src={product.images[0]?.src} alt={product.name}/>
+                          <div class="description-container p-4">
+                            <h1 class="text-amber-400 text-lg capitalize font-medium">{product.categories[0].name}</h1>
+                            <h2 class="text-black capitalize text-lg font-medium">{product.name}</h2>
+                            <p class="text-xl capitalize font-bold text-green-900">LKR {product.price}.00</p>
+                          </div>
+                        </div>
+                      </div>
+                      {/if}
+                    {/each}
+                 
+                  </Carousel>
+                 </section>
             </div>
         </div>
 
@@ -120,7 +147,7 @@
                 </div>
             </div>
             <div class="rounded-lg">
-                <Carousel autoplay="4000">
+                <!-- <Carousel autoplay="4000">
                     {#each item_cards_herbal as herbal, index (index)}
                         <div class="flex justify-around rounded-lg">
                             <div class="item-card shadow-sm shadow-green-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
@@ -133,7 +160,8 @@
                             </div>
                         </div>
                     {/each}
-                </Carousel>
+                </Carousel> -->
+                <!-- <Products /> -->
             </div>
         </div>
 
@@ -152,7 +180,7 @@
                 </div>
             </div>
             <div class="rounded-lg">
-                <Carousel autoplay="4000">
+                <!-- <Carousel autoplay="4000">
                     {#each item_cards_real_estate as real_estate, index (index)}
                         <div class="flex justify-around rounded-lg">
                             <div class="item-card shadow-sm shadow-green-500/50 rounded-lg bg-white m-2 w-full border border-blue-100">
@@ -165,7 +193,7 @@
                             </div>
                         </div>
                     {/each}
-                </Carousel>
+                </Carousel> -->
             </div>
         </div>
 
