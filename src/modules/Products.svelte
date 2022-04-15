@@ -14,7 +14,7 @@
 
 <script>
 
-  import Carousel from "../modules/Carousel.svelte";
+  import Carousel from "./Carousel.svelte";
   export let products;
 
   let product_values = Object.values(products);

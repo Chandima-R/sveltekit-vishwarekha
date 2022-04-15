@@ -30,3 +30,11 @@ p{
     font-family: 'Poppins', sans-serif;
     line-height: 2;
 }
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-in-out;
+}

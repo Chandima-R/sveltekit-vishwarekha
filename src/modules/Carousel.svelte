@@ -64,6 +64,8 @@
 </style>
 
 <script>
+// @ts-nocheck
+
     import Siema from 'siema'
     import {onMount, createEventDispatcher} from 'svelte'
 

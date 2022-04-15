@@ -1,20 +1,12 @@
 <script>
-    import Navbar from './Navbar.svelte'
-    import MainCarousel from './MainCarousel.svelte'
-    import WaveEffect from "./WaveEffect.svelte";
-    import Contact from "./Contact.svelte";
-    import About from "./About.svelte";
-    import IconSlider from "./IconSlider.svelte";
-    import CompanyIcons from "./CompanyIcons.svelte";
-    import Companies from "./Companies.svelte";
+    import Carousel from './carousel.svelte';
+    import Companies from './companies.svelte';
+    import About from './about.svelte';
+    import Contact from './contact.svelte';
 </script>
 
 <!--svelte components-->
-<Navbar />
-<MainCarousel />
-<WaveEffect />
-<CompanyIcons />
+<Carousel />
 <Companies />
-<IconSlider />
 <About />
 <Contact />

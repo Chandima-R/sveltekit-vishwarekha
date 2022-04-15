@@ -33,7 +33,7 @@
 <div class="svg-wrapper">
     <div class="container bg-white shadow shadow-green-900/50">
         <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-            <path d="M0,100 C100,150 350,0 500,50 L500,00 L0,0 Z" style="stroke: none; fill:#0A472E;"></path>
+            <path d="M0,100 C100,150 350,0 500,50 L500,00 L0,0 Z" style="stroke: none; fill:#14532d;"></path>
         </svg>
     </div>
 </div>

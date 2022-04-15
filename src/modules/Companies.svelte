@@ -18,10 +18,10 @@
   import Products from "./Products.svelte";
   export let products;
 
-  let product_values = Object.values(products);
+//   let product_values = Object.values(products);
 
-  let product_array = product_values[0];
-  let shuffled_product_array = product_array.sort(() => Math.random() - 0.5);
+//   let product_array = product_values[0];
+//   let shuffled_product_array = product_array.sort(() => Math.random() - 0.5);
 
 </script>
 
@@ -109,7 +109,7 @@
                         </div>
                     {/each}
                 </Carousel> -->
-                <section>
+                <!-- <section>
                   <Carousel autoplay="4000">
                  
                     {#each shuffled_product_array as product}
@@ -128,7 +128,7 @@
                     {/each}
                  
                   </Carousel>
-                 </section>
+                 </section> -->
             </div>
         </div>
 
