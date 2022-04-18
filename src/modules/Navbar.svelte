@@ -113,6 +113,7 @@
     justify-content: space-between;
     margin: 0;
     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
   }
 
   .navbar-list.mobile {
@@ -144,7 +145,6 @@
     justify-content: center;
     font-size: 35px;
     text-decoration: none;
-    display: flex;
     height: 45px;
     align-items: center;
     padding: 0 10px;

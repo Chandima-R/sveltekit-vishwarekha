@@ -1,3 +1,7 @@
+<script>
+  import Navbar from './Navbar.svelte'
+</script>
+
 <style>
   .main-carousel{
     height: 700px;
@@ -31,7 +35,6 @@
 
   .slider-sub-image{
     cursor: pointer;
-    transition: transform 200ms;
     transition: all 0.5s ease-in-out;
   }
 
@@ -43,6 +46,7 @@
 
 <!--start of slider section-->
 <section class="main-carousel bg-[url('/images/main-carousel/slider-image-2.jpg')] bg-cover flex flex-col m-auto" id="home">
+  <Navbar />
   <div
           class="flex flex-col h-fits w-full pt-30 px-4 md:py-14 md:pt-36 lg:pt-44 lg:px-24 lg:w-full lg:pb-60 lg:flex-row">
     <div class="slider-text w-full h-fit bg-green-900/30 p-8 rounded-lg mb-4 lg:w-3/5">
