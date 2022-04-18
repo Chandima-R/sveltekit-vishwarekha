@@ -153,6 +153,7 @@
                 <section>
                     <Carousel autoplay="4000">
 
+
                     {#each products as product}
                     {#if product.status == "publish"}
                         <div class="flex justify-around rounded-lg">
