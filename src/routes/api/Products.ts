@@ -16,8 +16,7 @@ export async function get() {
 				)
 		}
 	});
-	let products = await response.json();
-	products = JSON.stringify(products);
+	const products = await response.json();
 
 	return {
 		body: {
