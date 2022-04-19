@@ -67,8 +67,8 @@
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha foods</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <button class="flex justify-center text-center text-green-900">
-                        <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
+                    <button class="flex justify-center text-center text-green-900 py-2 px-3 bg-transparent hover:border-2 border-green-900 rounded-lg">
+                        <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="https://vishwarekhafood.com/" target="_blank">see more</a>
                         <img class="w-6 h-6" alt="see-more" src="/images/companies/link-image.png" />
                     </button>
                 </div>
@@ -105,8 +105,8 @@
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:mr-5 lg:ml-0">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha herbal</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <button class="flex justify-center text-center text-green-900">
-                        <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
+                    <button class="flex justify-center text-center text-green-900 py-2 px-3 bg-transparent hover:border-2 border-green-900 rounded-lg">
+                        <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="https://vishwarekhafood.com/" target="_blank">see more</a>
                         <img class="w-6 h-6" alt="see-more" src="/images/companies/link-image.png" />
                     </button>
                 </div>
@@ -143,8 +143,8 @@
                 <div class="w-full mt-6 lg:mt-0 lg:p-5 lg:ml-5">
                     <h1 class="text-2xl font-light md:font-bold capitalize mb-2 md:mb-4 text-green-900">vishwarekha real state</h1>
                     <p class="mb-4 md:mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <button class="flex justify-center text-center text-green-900">
-                        <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="/">see more</a>
+                    <button class="flex justify-center text-center text-green-900 py-2 px-3 bg-transparent hover:border-2 border-green-900 rounded-lg">
+                        <a class="text-green-900 font-medium md:font-bold capitalize mr-2" href="https://vishwarekhafood.com/" target="_blank">see more</a>
                         <img class="w-6 h-6" alt="see-more" src="/images/companies/link-image.png" />
                     </button>
                 </div>

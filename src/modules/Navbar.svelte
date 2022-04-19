@@ -48,6 +48,10 @@
 
 <style>
 
+  #nav{
+    z-index: 1000;
+  }
+
   .mobile-icon {
     width: 30px;
     height: 20px;

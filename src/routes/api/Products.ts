@@ -1,11 +1,9 @@
 import 'dotenv/config';
 
-export async function get(){
+export async function get() {
 	const response = await fetch('https://vishwarekhafood.com/wp-json/wc/v3/products/', {
 		method: 'GET',
 		headers: {
-			'Content-Type': 'application/json',
-      accept: 'application/json',
 			Credentials: 'include',
 			Authorization:
 				'Basic ' +
@@ -23,4 +21,4 @@ export async function get(){
 			products
 		}
 	};
-};
+}
