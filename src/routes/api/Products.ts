@@ -16,7 +16,7 @@ export async function get() {
 				)
 		}
 	});
-	const products = await response.json();
+	const products = await response.text();
 
 	return {
 		body: {
