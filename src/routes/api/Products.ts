@@ -16,11 +16,11 @@ export async function get() {
 				)
 		}
 	});
-	const products = await response.text();
+	const products = await response.json();
 
 	return {
 		body: {
-			products
+			products: JSON.strigify(products)
 		}
 	};
 }
