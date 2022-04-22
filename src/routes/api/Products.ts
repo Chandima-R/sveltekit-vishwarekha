@@ -9,11 +9,11 @@ export async function get() {
 			Credentials: 'include',
 			Authorization:
 				'Basic ' +
-				btoa(
+				Buffer.from(
 					'ck_d1446ae7147989ad025a5ebf675880958389cb76' +
 						':' +
 						'cs_6381205250b2b02d2b9677d73685f3e27e5bf15a'
-				)
+				).toString('base64')
 		}
 	});
 	const products = await response.json();

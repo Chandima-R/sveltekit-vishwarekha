@@ -1,10 +1,18 @@
 <script context="module">
-    export async function load({fetch}){
-        const res = await fetch('/api/Products');
-        const products = await res.json()
+    import axios from 'axios'
 
-        return {
-            props: {
+    export async function load({fetch}){
+        let products = []
+        try{
+            const res = await axios.get('/api/Products');
+            products = res.data.products
+        }
+        catch(e){
+            console.log(e)
+        }
+
+        return{
+            props :{
                 products
             }
         }
@@ -20,10 +28,7 @@
 
     export let products;
 
-    let product_values = Object.values(products);
-
-    let product_array = product_values[0];
-    let shuffled_product_array = product_array.sort(() => Math.random() - 0.5);
+    let shuffled_product_array = products.sort(() => Math.random() - 0.5)
 
 
 </script>
